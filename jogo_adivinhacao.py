@@ -30,7 +30,14 @@ def jogador1():
     cont1 = cont1 + 1
 
     print("Jogador numero 1 joga")
-    tentativa = int(input("Digite sua tentativa: "))
+
+    while True:
+        try:
+            tentativa = int(input("Digite sua tentativa: "))
+            break
+        except ValueError:
+            print("Digite apenas numeros inteiros")
+
     if tentativa == num:
         return tentativa
     if tentativa > num:
@@ -49,7 +56,14 @@ def jogador2():
     cont2 = cont2 + 1
 
     print("Jogador numero 2 joga")
-    tentativa = int(input("Digite sua tentativa: "))
+    
+    while True:
+        try:
+            tentativa = int(input("Digite sua tentativa: "))
+            break
+        except ValueError:
+            print("Digite apenas numeros inteiros")
+
     if tentativa == num:
         return tentativa
     if tentativa > num:
